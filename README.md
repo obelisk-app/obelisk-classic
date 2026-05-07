@@ -17,9 +17,9 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Fabricio333/obelisk/stargazers"><img src="https://img.shields.io/github/stars/Fabricio333/obelisk?style=flat&logo=github&color=b4f953&labelColor=0a0a0a" alt="GitHub stars" /></a>
+  <a href="https://github.com/obelisk-app/obelisk-classic/stargazers"><img src="https://img.shields.io/github/stars/obelisk-app/obelisk-classic?style=flat&logo=github&color=b4f953&labelColor=0a0a0a" alt="GitHub stars" /></a>
   <a href="https://classic.obelisk.ar"><img src="https://img.shields.io/badge/chat-classic.obelisk.ar-b4f953?style=flat&labelColor=0a0a0a" alt="Join the Obelisk server" /></a>
-  <a href="LICENSE"><img src="https://img.shields.io/github/license/Fabricio333/obelisk?style=flat&color=b4f953&labelColor=0a0a0a" alt="License" /></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/obelisk-app/obelisk-classic?style=flat&color=b4f953&labelColor=0a0a0a" alt="License" /></a>
   <a href="https://lacrypta.ar"><img src="https://img.shields.io/badge/built%20for-La%20Crypta%20IDENTITY-b4f953?style=flat&labelColor=0a0a0a" alt="La Crypta IDENTITY Hackathon" /></a>
 </p>
 
@@ -27,7 +27,7 @@
 
 Obelisk feels like Discord — servers, channels, voice rooms, threads, reactions, forums, DMs — but your account is a **cryptographic key you own**, not an email on a corporate server. Built for La Crypta's **IDENTITY Hackathon** (April 2026).
 
-> **Heads up — this is "classic" Obelisk.** This repo is the original Postgres + Prisma + Socket.io + NDK stack, deployed at **[classic.obelisk.ar](https://classic.obelisk.ar)**. The relay-only rewrite (no backend, pure NIP-29 over Nostr relays) lives in the `obelisk-dex` repo and is deployed at **[obelisk.ar](https://obelisk.ar)**. New development happens there; this codebase is in maintenance mode while parity is reached.
+> **Heads up — this is "classic" Obelisk.** This repo is the original Postgres + Prisma + Socket.io + NDK stack, deployed at **[classic.obelisk.ar](https://classic.obelisk.ar)**. The relay-only rewrite (no backend, pure NIP-29 over Nostr relays) lives at **[github.com/obelisk-app/obelisk](https://github.com/obelisk-app/obelisk)** and is deployed at **[obelisk.ar](https://obelisk.ar)**. New development happens there; this codebase is in maintenance mode while parity is reached.
 
 ## Why
 
@@ -100,7 +100,7 @@ Obelisk is already in real-world use:
 ## Quick Start (dev)
 
 ```bash
-git clone https://github.com/Fabricio333/obelisk.git
+git clone https://github.com/obelisk-app/obelisk-classic.git
 cd obelisk
 npm install
 docker compose up -d db         # PostgreSQL
