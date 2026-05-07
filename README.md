@@ -25,40 +25,47 @@
 
 ---
 
-Obelisk feels like Discord — servers, channels, voice rooms, threads, reactions, forums, DMs — but your account is a **cryptographic key you own**, not an email on a corporate server. Built for La Crypta's **IDENTITY Hackathon** (April 2026).
+> ⚠️ **This is "classic" Obelisk — maintenance mode.**
+>
+> The current Obelisk app is the **relay-only rewrite** at **[github.com/obelisk-app/obelisk](https://github.com/obelisk-app/obelisk)** (deployed at [obelisk.ar](https://obelisk.ar)). New features land there.
+>
+> **This repo** is the original Postgres + Prisma + Socket.io + NDK stack, deployed at [classic.obelisk.ar](https://classic.obelisk.ar). Kept online as long as users rely on it; security patches only — no new features.
 
-> **Heads up — this is "classic" Obelisk.** This repo is the original Postgres + Prisma + Socket.io + NDK stack, deployed at **[classic.obelisk.ar](https://classic.obelisk.ar)**. The relay-only rewrite (no backend, pure NIP-29 over Nostr relays) lives at **[github.com/obelisk-app/obelisk](https://github.com/obelisk-app/obelisk)** and is deployed at **[obelisk.ar](https://obelisk.ar)**. New development happens there; this codebase is in maintenance mode while parity is reached.
+Obelisk feels like Discord — servers, channels, voice, threads, reactions, forums, DMs — but your account is a Nostr keypair, not an email on a corporate server. Built for La Crypta's **IDENTITY Hackathon** (April 2026).
 
-## Why
+## The Obelisk family
 
-Discord-style chat without the Discord-style data trail.
+| Repo | What |
+|------|------|
+| [obelisk-app/obelisk](https://github.com/obelisk-app/obelisk) | The current app — relay-only rewrite |
+| [**obelisk-app/obelisk-classic**](https://github.com/obelisk-app/obelisk-classic) | This repo — original centralized stack |
+| [obelisk-app/obelisk-relay](https://github.com/obelisk-app/obelisk-relay) | NIP-29 groups relay (Rust) |
+| [obelisk-app/obelisk-sfu](https://github.com/obelisk-app/obelisk-sfu) | mediasoup SFU for voice |
+| [obelisk-app/obelisk-bots](https://github.com/obelisk-app/obelisk-bots) | Nostr bots toolkit |
 
-- **No personal information.** Identity is a Nostr keypair — no email, phone, name, or device fingerprint required, ever. The server stores pubkeys and the messages users explicitly send; nothing else.
-- **Open source and self-hosted.** Every Obelisk instance is run by its operator on their own VPS. No vendor lock-in, no "platform" sitting between a community and its members.
-- **Built to evolve.** A small, opinionated stack (Next.js + Prisma + Socket.io + NDK) makes it cheap to ship new features fast — voice, zaps, WoT spam filtering, the AI-agent admin CLI all landed inside one hackathon cycle.
+## Why (it shipped)
 
-Nostr provides the **identity layer** (keys, profiles, NIP-05, Web of Trust); Obelisk provides everything a community actually runs on (channels, roles, real-time delivery, moderation).
+- **No personal data.** Identity is a Nostr keypair — no email, phone, or device fingerprint.
+- **Self-hosted.** Every instance runs on its operator's VPS. No vendor in the middle.
+- **Built to evolve fast.** Voice, zaps, WoT spam filtering, AI-agent admin CLI all landed in one hackathon cycle.
 
-## Adoption
-
-Obelisk is already in real-world use:
-
-- **75+ users** on the public global server at [classic.obelisk.ar](https://classic.obelisk.ar).
-- **20+ users** migrated from La Crypta's official Discord to the La Crypta server on Obelisk.
+Used in production:
+- **~75 users** at [classic.obelisk.ar](https://classic.obelisk.ar)
+- **20+ users** migrated from La Crypta's Discord
 
 ## Features
 
-- 🔑 **Nostr login** — NIP-07 extension, nsec string, or NIP-46 bunker (QR). No signup forms, ever.
-- 💬 **Real-time chat** — servers, channels, threads, reactions, mentions, file uploads, search.
-- 🎙️ **Voice channels** — WebSocket audio relay via Socket.io. Works through tunnels/proxies (no WebRTC P2P required).
-- 🔒 **Encrypted DMs** — private messages via Nostr (NIP-17 gift-wrapped).
-- 🛡️ **Web of Trust spam filter** — new accounts are scored against your server's Nostr follow graph. No CAPTCHAs, no KYC, no phone numbers.
-- ⚡ **Bitcoin zaps** — send sats in chat via Nostr Wallet Connect (NIP-47). The wallet connection string is encrypted client-side before it ever hits the server, and you set per-user spend budgets.
-- 🤖 **Admin CLI for coding agents** — `npm run admin` ships a scriptable admin client that logs in with its own nsec (or NIP-46 bunker) and drives the same HTTP API the web UI uses. Any CLI coding agent (Claude Code, Codex, Cursor, etc.) can manage servers, channels, roles, bans, and bots on any Obelisk instance, with role checks enforced server-side.
-- 👮 **Moderation** — roles & permissions, mutes, warnings, bans, reports, audit log, forum channels.
-- 🎮 **Games** — built-in chess, tic-tac-toe, chain reaction.
-- 🏠 **Self-hostable** — Docker Compose stack runs on a 2 GB VPS for hundreds of concurrent users.
-- 🌍 **i18n** — English and Spanish out of the box.
+- 🔑 **Nostr login** — NIP-07, nsec, or NIP-46 bunker (QR). No signup forms.
+- 💬 **Real-time chat** — channels, threads, reactions, mentions, file uploads, NIP-50 search.
+- 🎙️ **Voice channels** — WebSocket audio relay via Socket.io (works through tunnels).
+- 🔒 **Encrypted DMs** — NIP-17 gift-wrapped private messages.
+- 🛡️ **WoT spam filter** — new accounts scored against the server's follow graph. No CAPTCHAs.
+- ⚡ **Bitcoin zaps** — NIP-47 NWC; wallet string encrypted client-side, per-user spend budgets.
+- 🤖 **Admin CLI for AI agents** — `npm run admin` drives the same API the web UI uses. Role checks enforced server-side.
+- 👮 **Moderation** — roles, mutes, warnings, bans, reports, audit log, forums.
+- 🎮 **Games** — chess, tic-tac-toe, chain reaction.
+- 🏠 **Self-hostable** — Docker Compose on a 2 GB VPS handles hundreds of concurrent users.
+- 🌍 **i18n** — English and Spanish.
 
 ## Screenshots
 
