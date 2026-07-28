@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <a href="https://classic.obelisk.ar">Live app (classic)</a> ·
+  <a href="https://obelisk.ar">Current Obelisk</a> ·
   <a href="ROADMAP.md">Roadmap</a> ·
   <a href="DEPLOY.md">Self-host</a> ·
   <a href="docs/">Docs</a>
@@ -18,18 +18,19 @@
 
 <p align="center">
   <a href="https://github.com/obelisk-app/obelisk-classic/stargazers"><img src="https://img.shields.io/github/stars/obelisk-app/obelisk-classic?style=flat&logo=github&color=b4f953&labelColor=0a0a0a" alt="GitHub stars" /></a>
-  <a href="https://classic.obelisk.ar"><img src="https://img.shields.io/badge/chat-classic.obelisk.ar-b4f953?style=flat&labelColor=0a0a0a" alt="Join the Obelisk server" /></a>
+  <a href="https://obelisk.ar"><img src="https://img.shields.io/badge/current-obelisk.ar-b4f953?style=flat&labelColor=0a0a0a" alt="Open the current Obelisk app" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/github/license/obelisk-app/obelisk-classic?style=flat&color=b4f953&labelColor=0a0a0a" alt="License" /></a>
   <a href="https://lacrypta.ar"><img src="https://img.shields.io/badge/built%20for-La%20Crypta%20IDENTITY-b4f953?style=flat&labelColor=0a0a0a" alt="La Crypta IDENTITY Hackathon" /></a>
 </p>
 
 ---
 
-> ⚠️ **This is "classic" Obelisk — maintenance mode.**
+> [!CAUTION]
+> **DEPRECATED AND OFFLINE**
 >
-> The current Obelisk app is the **relay-only rewrite** at **[github.com/obelisk-app/obelisk](https://github.com/obelisk-app/obelisk)** (deployed at [obelisk.ar](https://obelisk.ar)). New features land there.
+> `classic.obelisk.ar` was permanently retired on July 28, 2026.
 >
-> **This repo** is the original Postgres + Prisma + Socket.io + NDK stack, deployed at [classic.obelisk.ar](https://classic.obelisk.ar). Kept online as long as users rely on it; security patches only — no new features.
+> This original Postgres + Prisma + Socket.io + NDK stack is preserved for historical reference only. Use the current relay-only Obelisk at **[obelisk.ar](https://obelisk.ar)** and **[github.com/obelisk-app/obelisk](https://github.com/obelisk-app/obelisk)**.
 
 Obelisk feels like Discord — servers, channels, voice, threads, reactions, forums, DMs — but your account is a Nostr keypair, not an email on a corporate server. Built for La Crypta's **IDENTITY Hackathon** (April 2026).
 
@@ -49,8 +50,8 @@ Obelisk feels like Discord — servers, channels, voice, threads, reactions, for
 - **Self-hosted.** Every instance runs on its operator's VPS. No vendor in the middle.
 - **Built to evolve fast.** Voice, zaps, WoT spam filtering, AI-agent admin CLI all landed in one hackathon cycle.
 
-Used in production:
-- **~75 users** at [classic.obelisk.ar](https://classic.obelisk.ar)
+Historical production usage:
+- **~75 users** at `classic.obelisk.ar`
 - **20+ users** migrated from La Crypta's Discord
 
 ## Features
